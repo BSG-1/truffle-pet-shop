@@ -9,5 +9,11 @@ contract Adoption {
 
         //whoever does the adopting, use their address
         adopters[petId] = msg.sender;
+
+        return petId;
+    }
+
+    function getAdopters() public returns (address[16]){
+        return adopters;
     }
 }
